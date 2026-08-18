@@ -1,11 +1,14 @@
+import sys
+import subprocess
 import threading
+
+if importlib.util.find_spec("requests") is None:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    
 import requests
 import os
 import socket
 import importlib.util
-
-if importlib.util.find_spec("requests") is None:
-    os.system("pip install requests")
     
 os.system("cls" or "clear")
 
@@ -36,11 +39,6 @@ def user4():
         print(requests.get("https://"+ url))
 
 def user5():
-    while True:
-
-        print(requests.get("https://"+ url))
-
-def user6():
     while True:
 
         print(requests.get("https://"+ url))
