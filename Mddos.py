@@ -10,7 +10,7 @@ import requests
 import os
 import socket
     
-os.system("cls" or "clear")
+os.system("clear")
 
 url = input("\nEnter URL: ")
 
