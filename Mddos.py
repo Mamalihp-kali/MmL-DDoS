@@ -2,7 +2,11 @@ import threading
 import requests
 import os
 import socket
+import importlib.util
 
+if importlib.util.find_spec("requests") is None:
+    os.system("pip install requests")
+    
 os.system("cls" or "clear")
 
 url = input("\nEnter URL: ")
