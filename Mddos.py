@@ -1,6 +1,7 @@
 import sys
 import subprocess
 import threading
+import importlib.util
 
 if importlib.util.find_spec("requests") is None:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
@@ -8,7 +9,6 @@ if importlib.util.find_spec("requests") is None:
 import requests
 import os
 import socket
-import importlib.util
     
 os.system("cls" or "clear")
 
